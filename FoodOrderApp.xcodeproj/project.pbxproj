@@ -18,6 +18,8 @@
 		74EC54622993DE1E00400DF8 /* HomePageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC54612993DE1E00400DF8 /* HomePageInteractor.swift */; };
 		74EC54642993DE2D00400DF8 /* HomePagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC54632993DE2D00400DF8 /* HomePagePresenter.swift */; };
 		74EC54672993DE4A00400DF8 /* HomePageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC54662993DE4A00400DF8 /* HomePageRouter.swift */; };
+		74EC546A2993DF4500400DF8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 74EC54692993DF4500400DF8 /* Kingfisher */; };
+		74EC546D2993DF6E00400DF8 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 74EC546C2993DF6E00400DF8 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74EC546A2993DF4500400DF8 /* Kingfisher in Frameworks */,
+				74EC546D2993DF6E00400DF8 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +206,10 @@
 			dependencies = (
 			);
 			name = FoodOrderApp;
+			packageProductDependencies = (
+				74EC54692993DF4500400DF8 /* Kingfisher */,
+				74EC546C2993DF6E00400DF8 /* Alamofire */,
+			);
 			productName = FoodOrderApp;
 			productReference = 74EC54392993BE0200400DF8 /* FoodOrderApp.app */;
 			productType = "com.apple.product-type.application";
@@ -230,6 +238,10 @@
 				Base,
 			);
 			mainGroup = 74EC54302993BE0200400DF8;
+			packageReferences = (
+				74EC54682993DF4500400DF8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				74EC546B2993DF6E00400DF8 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 74EC543A2993BE0200400DF8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -482,6 +494,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74EC54682993DF4500400DF8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		74EC546B2993DF6E00400DF8 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74EC54692993DF4500400DF8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74EC54682993DF4500400DF8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		74EC546C2993DF6E00400DF8 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74EC546B2993DF6E00400DF8 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74EC54312993BE0200400DF8 /* Project object */;
 }
