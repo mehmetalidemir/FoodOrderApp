@@ -89,11 +89,11 @@
             </objects>
             <point key="canvasLocation" x="1982.4427480916029" y="-2.1126760563380285"/>
         </scene>
-        <!--Item-->
+        <!--Yemek-->
         <scene sceneID="wCJ-Zh-1mV">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3WB-zq-Xt9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="z9b-ge-cPo"/>
+                    <tabBarItem key="tabBarItem" title="Yemek" image="takeoutbag.and.cup.and.straw.fill" catalog="system" id="z9b-ge-cPo"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="NqT-7T-V3k">
                         <rect key="frame" x="0.0" y="59" width="393" height="96"/>
@@ -114,6 +114,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="z1S-ko-NZB" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yDt-Ns-hya">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -127,6 +128,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
