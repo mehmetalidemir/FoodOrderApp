@@ -8,11 +8,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var homePagePresenterObject: ViewToPresenterHomePageProtocol?
 
     @IBOutlet weak var foodCollectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        HomePageRouter.createModule(ref: self)
     }
 
 
@@ -25,17 +27,21 @@ extension ViewController {
     }
 }
 
+extension ViewController: PresenterToViewHomePageProtocol {
+
+}
+
 
 extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "foodCell", for: indexPath) as! FoodCollectionViewCell
         cell.foodName.text = "yemek"
         return cell
     }
-    
+
 
 }

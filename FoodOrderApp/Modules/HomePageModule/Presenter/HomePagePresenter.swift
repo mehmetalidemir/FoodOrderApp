@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+class HomePagePresenter: ViewToPresenterHomePageProtocol, InteractorToPresenterHomePageProtocol {
+    var homePageInteractor: PresenterToInteractorHomePageProtocol?
+    var homePageView: PresenterToViewHomePageProtocol?
+
+
+}
