@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		746E8E2829956364006F741E /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2729956364006F741E /* Foods.swift */; };
+		746E8E2A29956528006F741E /* FoodsCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2929956528006F741E /* FoodsCart.swift */; };
 		74EC543D2993BE0200400DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC543C2993BE0200400DF8 /* AppDelegate.swift */; };
 		74EC543F2993BE0200400DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC543E2993BE0200400DF8 /* SceneDelegate.swift */; };
 		74EC54412993BE0200400DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC54402993BE0200400DF8 /* ViewController.swift */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		746E8E2729956364006F741E /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
+		746E8E2929956528006F741E /* FoodsCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCart.swift; sourceTree = "<group>"; };
 		74EC54392993BE0200400DF8 /* FoodOrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC543C2993BE0200400DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74EC543E2993BE0200400DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 		74EC54512993BFAF00400DF8 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				746E8E2729956364006F741E /* Foods.swift */,
+				746E8E2929956528006F741E /* FoodsCart.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -275,8 +281,10 @@
 				74EC543D2993BE0200400DF8 /* AppDelegate.swift in Sources */,
 				74EC545E2993CF6D00400DF8 /* FoodCollectionViewCell.swift in Sources */,
 				74EC54602993DDF400400DF8 /* HomePageProtocols.swift in Sources */,
+				746E8E2829956364006F741E /* Foods.swift in Sources */,
 				74EC54672993DE4A00400DF8 /* HomePageRouter.swift in Sources */,
 				74EC543F2993BE0200400DF8 /* SceneDelegate.swift in Sources */,
+				746E8E2A29956528006F741E /* FoodsCart.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
