@@ -11,5 +11,12 @@ class HomePagePresenter: ViewToPresenterHomePageProtocol, InteractorToPresenterH
     var homePageInteractor: PresenterToInteractorHomePageProtocol?
     var homePageView: PresenterToViewHomePageProtocol?
 
+    func getAllFoods() {
+        homePageInteractor?.getAllFoodsInteractor()
+    }
+
+    func sendDataToPresenter(foods: [Foods]) {
+        homePageView?.sendDataToView(foods: foods)
+    }
 
 }
