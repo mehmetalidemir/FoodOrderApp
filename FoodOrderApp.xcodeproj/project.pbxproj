@@ -9,6 +9,12 @@
 /* Begin PBXBuildFile section */
 		746E8E2829956364006F741E /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2729956364006F741E /* Foods.swift */; };
 		746E8E2A29956528006F741E /* FoodsCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2929956528006F741E /* FoodsCart.swift */; };
+		74D469D1299671C500FA5F7F /* DetailPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469D0299671C500FA5F7F /* DetailPageRouter.swift */; };
+		74D469D3299671D900FA5F7F /* DetailPagePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469D2299671D900FA5F7F /* DetailPagePresenter.swift */; };
+		74D469D5299671ED00FA5F7F /* DetailPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469D4299671ED00FA5F7F /* DetailPageInteractor.swift */; };
+		74D469D72996720B00FA5F7F /* DetailPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469D62996720B00FA5F7F /* DetailPageProtocols.swift */; };
+		74D469D92996722600FA5F7F /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469D82996722600FA5F7F /* DetailPageViewController.swift */; };
+		74D469DC2996BA5D00FA5F7F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469DB2996BA5D00FA5F7F /* Protocols.swift */; };
 		74EC543D2993BE0200400DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC543C2993BE0200400DF8 /* AppDelegate.swift */; };
 		74EC543F2993BE0200400DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC543E2993BE0200400DF8 /* SceneDelegate.swift */; };
 		74EC54412993BE0200400DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC54402993BE0200400DF8 /* ViewController.swift */; };
@@ -27,6 +33,12 @@
 /* Begin PBXFileReference section */
 		746E8E2729956364006F741E /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		746E8E2929956528006F741E /* FoodsCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCart.swift; sourceTree = "<group>"; };
+		74D469D0299671C500FA5F7F /* DetailPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageRouter.swift; sourceTree = "<group>"; };
+		74D469D2299671D900FA5F7F /* DetailPagePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPagePresenter.swift; sourceTree = "<group>"; };
+		74D469D4299671ED00FA5F7F /* DetailPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageInteractor.swift; sourceTree = "<group>"; };
+		74D469D62996720B00FA5F7F /* DetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageProtocols.swift; sourceTree = "<group>"; };
+		74D469D82996722600FA5F7F /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
+		74D469DB2996BA5D00FA5F7F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
 		74EC54392993BE0200400DF8 /* FoodOrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC543C2993BE0200400DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74EC543E2993BE0200400DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +67,66 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		74D469CA2996714F00FA5F7F /* DetailPageModule */ = {
+			isa = PBXGroup;
+			children = (
+				74D469CF2996719700FA5F7F /* Protocols */,
+				74D469CE2996719000FA5F7F /* View */,
+				74D469CD2996718500FA5F7F /* Interactor */,
+				74D469CC2996717E00FA5F7F /* Presenter */,
+				74D469CB2996716D00FA5F7F /* Router */,
+			);
+			path = DetailPageModule;
+			sourceTree = "<group>";
+		};
+		74D469CB2996716D00FA5F7F /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				74D469D0299671C500FA5F7F /* DetailPageRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		74D469CC2996717E00FA5F7F /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				74D469D2299671D900FA5F7F /* DetailPagePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		74D469CD2996718500FA5F7F /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				74D469D4299671ED00FA5F7F /* DetailPageInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		74D469CE2996719000FA5F7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74D469D82996722600FA5F7F /* DetailPageViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74D469CF2996719700FA5F7F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				74D469D62996720B00FA5F7F /* DetailPageProtocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		74D469DA2996BA4D00FA5F7F /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				74D469DB2996BA5D00FA5F7F /* Protocols.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		74EC54302993BE0200400DF8 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +175,7 @@
 		74EC54522993BFCF00400DF8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				74D469DA2996BA4D00FA5F7F /* Protocols */,
 				74EC54552993C1FA00400DF8 /* Constants */,
 				74EC54512993BFAF00400DF8 /* Entity */,
 			);
@@ -124,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				74EC54562993CA2400400DF8 /* HomePageModule */,
+				74D469CA2996714F00FA5F7F /* DetailPageModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -275,16 +349,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D469D92996722600FA5F7F /* DetailPageViewController.swift in Sources */,
+				74D469D3299671D900FA5F7F /* DetailPagePresenter.swift in Sources */,
+				74D469D1299671C500FA5F7F /* DetailPageRouter.swift in Sources */,
 				74EC54622993DE1E00400DF8 /* HomePageInteractor.swift in Sources */,
 				74EC54412993BE0200400DF8 /* ViewController.swift in Sources */,
 				74EC54642993DE2D00400DF8 /* HomePagePresenter.swift in Sources */,
 				74EC543D2993BE0200400DF8 /* AppDelegate.swift in Sources */,
 				74EC545E2993CF6D00400DF8 /* FoodCollectionViewCell.swift in Sources */,
+				74D469D72996720B00FA5F7F /* DetailPageProtocols.swift in Sources */,
 				74EC54602993DDF400400DF8 /* HomePageProtocols.swift in Sources */,
+				74D469D5299671ED00FA5F7F /* DetailPageInteractor.swift in Sources */,
 				746E8E2829956364006F741E /* Foods.swift in Sources */,
 				74EC54672993DE4A00400DF8 /* HomePageRouter.swift in Sources */,
 				74EC543F2993BE0200400DF8 /* SceneDelegate.swift in Sources */,
 				746E8E2A29956528006F741E /* FoodsCart.swift in Sources */,
+				74D469DC2996BA5D00FA5F7F /* Protocols.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
