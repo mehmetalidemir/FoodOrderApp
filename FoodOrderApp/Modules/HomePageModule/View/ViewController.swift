@@ -64,6 +64,22 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let food = allFoods[indexPath.row]
+        performSegue(withIdentifier: "toDetail", sender: food)
+        collectionView.deselectItem(at: indexPath, animated: true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetail" {
+            if let food = sender as? Foods {
+                let gidilecekVC = segue.destination as! DetailPageViewController
+                gidilecekVC.food = food
+            }
+        }
+      
+    }
 
 
 }
