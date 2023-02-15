@@ -13,7 +13,8 @@ class DetailPageInteractor: PresenterToInteractorDetailPageProtocol {
     var unit = 1
 
     func getCartInfoI() {
-        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post).response { response in
+        let param: Parameters = ["kullanici_adi": "demir"]
+        AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).response { response in
             if let data = response.data {
                 do {
                     let answer = try JSONDecoder().decode(FoodsCartResponse.self, from: data)
@@ -27,8 +28,8 @@ class DetailPageInteractor: PresenterToInteractorDetailPageProtocol {
         }
     }
 
-    func deleteFromCartI(sepet_yemek_id: String) {
-        let param: Parameters = ["sepet_yemek_id": sepet_yemek_id]
+    func deleteFromCartI(sepet_yemek_id: String, kullanici_adi: String) {
+        let param: Parameters = ["sepet_yemek_id": sepet_yemek_id, "kullanici_adi": "demir"]
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response { response in
             if let data = response.data {
                 do {
@@ -49,7 +50,7 @@ class DetailPageInteractor: PresenterToInteractorDetailPageProtocol {
 
             if let intUnit = Int(unit), let intFiyat = Int(yemek_fiyat) {
 
-                let params: Parameters = ["yemek_adi": yemek_adi, "yemek_resim_adi": yemek_resim_adi, "yemek_fiyat": intFiyat, "yemek_siparis_adet": intUnit]
+                let params: Parameters = ["yemek_adi": yemek_adi, "yemek_resim_adi": yemek_resim_adi, "yemek_fiyat": intFiyat, "yemek_siparis_adet": intUnit, "kullanici_adi": "demir"]
 
                 AF.request("http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php", method: .post, parameters: params).response { response in
                     if let data = response.data {

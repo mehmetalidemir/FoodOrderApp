@@ -17,8 +17,8 @@ class DetailPagePresenter: ViewToPresenterDetailPageProtocol, InteractorToPresen
 
     }
 
-    func deleteFromCart(sepet_yemek_id: String) {
-        detailPageInteractor?.deleteFromCartI(sepet_yemek_id: sepet_yemek_id)
+    func deleteFromCart(sepet_yemek_id: String, kullanici_adi: String) {
+        detailPageInteractor?.deleteFromCartI(sepet_yemek_id: sepet_yemek_id, kullanici_adi: kullanici_adi)
 
     }
 
