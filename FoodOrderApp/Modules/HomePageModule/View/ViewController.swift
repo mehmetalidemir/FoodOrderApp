@@ -12,6 +12,8 @@ import Alamofire
 class ViewController: UIViewController {
     var homePagePresenterObject: ViewToPresenterHomePageProtocol?
     var allFoods = [Foods]()
+    var badgeForCart = 0
+
 
 
     @IBOutlet weak var foodCollectionView: UICollectionView!
@@ -64,13 +66,13 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
 
         return cell
     }
-    
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let food = allFoods[indexPath.row]
         performSegue(withIdentifier: "toDetail", sender: food)
         collectionView.deselectItem(at: indexPath, animated: true)
     }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toDetail" {
             if let food = sender as? Foods {
@@ -78,8 +80,20 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                 gidilecekVC.food = food
             }
         }
-      
+
     }
 
 
+}
+
+extension ViewController: DetailPageToHomePage {
+    func sendBadgeCountToHomePage(badgeCount: Int) {
+        self.badgeForCart = badgeCount
+        if let tabItems = tabBarController?.tabBar.items {
+            let cartItem = tabItems[1]
+            if badgeForCart > 0 {
+                cartItem.badgeValue = String(badgeForCart)
+            }
+        }
+    }
 }
