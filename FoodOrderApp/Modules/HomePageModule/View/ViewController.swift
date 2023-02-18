@@ -14,9 +14,12 @@ class ViewController: UIViewController {
     var allFoods = [Foods]()
     var badgeForCart = 0
 
-
-
     @IBOutlet weak var foodCollectionView: UICollectionView!
+    var cellWidth: CGFloat = 0
+    var cellHeight: CGFloat = 0
+    var spacing: CGFloat = 12
+    var numberOfColumn: CGFloat = 2
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
@@ -24,7 +27,23 @@ class ViewController: UIViewController {
         homePagePresenterObject?.getAllFoods()
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        foodCollectionView.contentInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
+        if let flowLayout = foodCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            flowLayout.minimumLineSpacing = spacing
+            flowLayout.minimumInteritemSpacing = spacing
+            self.tabBarController?.tabBar.layer.masksToBounds = true
+            self.tabBarController?.tabBar.isTranslucent = true
+            self.tabBarController?.tabBar.barStyle = .default
+            self.tabBarController?.tabBar.layer.cornerRadius = 30
+            self.tabBarController?.tabBar.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+            self.tabBarController?.tabBar.layer.borderColor = UIColor.systemGreen.cgColor
+            self.tabBarController?.tabBar.layer.borderWidth = 1
+            self.tabBarController?.tabBar.layer.backgroundColor = UIColor.white.cgColor
 
+        }
+    }
 }
 
 extension ViewController {

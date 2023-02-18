@@ -10,6 +10,10 @@
 		745877D1299A55CA00948342 /* UIButton+preventRepeatedPresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745877D0299A55CA00948342 /* UIButton+preventRepeatedPresses.swift */; };
 		746E8E2829956364006F741E /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2729956364006F741E /* Foods.swift */; };
 		746E8E2A29956528006F741E /* FoodsCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2929956528006F741E /* FoodsCart.swift */; };
+		748B0179299E4C1D00FDF089 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B0178299E4C1D00FDF089 /* Pacifico-Regular.ttf */; };
+		748B017E299E4F7500FDF089 /* FredokaOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B017C299E4F0400FDF089 /* FredokaOne.ttf */; };
+		748B0180299E5DEA00FDF089 /* Blinker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B017F299E5DEA00FDF089 /* Blinker-Regular.ttf */; };
+		748B0182299E5E3900FDF089 /* Blinker-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B0181299E5E3900FDF089 /* Blinker-Bold.ttf */; };
 		749476A22997C3D400951132 /* CartPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749476A12997C3D400951132 /* CartPageProtocols.swift */; };
 		749476A42997C3EA00951132 /* CartPageRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749476A32997C3EA00951132 /* CartPageRouter.swift */; };
 		749476A62997C3FF00951132 /* CartPageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749476A52997C3FF00951132 /* CartPageInteractor.swift */; };
@@ -41,6 +45,10 @@
 		745877D0299A55CA00948342 /* UIButton+preventRepeatedPresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+preventRepeatedPresses.swift"; sourceTree = "<group>"; };
 		746E8E2729956364006F741E /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		746E8E2929956528006F741E /* FoodsCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCart.swift; sourceTree = "<group>"; };
+		748B0178299E4C1D00FDF089 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../../../../Pacifico 2/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
+		748B017C299E4F0400FDF089 /* FredokaOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FredokaOne.ttf; sourceTree = "<group>"; };
+		748B017F299E5DEA00FDF089 /* Blinker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Regular.ttf"; sourceTree = "<group>"; };
+		748B0181299E5E3900FDF089 /* Blinker-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Bold.ttf"; sourceTree = "<group>"; };
 		749476A12997C3D400951132 /* CartPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageProtocols.swift; sourceTree = "<group>"; };
 		749476A32997C3EA00951132 /* CartPageRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageRouter.swift; sourceTree = "<group>"; };
 		749476A52997C3FF00951132 /* CartPageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartPageInteractor.swift; sourceTree = "<group>"; };
@@ -81,6 +89,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		748B0177299E4A7C00FDF089 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				748B017F299E5DEA00FDF089 /* Blinker-Regular.ttf */,
+				748B017C299E4F0400FDF089 /* FredokaOne.ttf */,
+				748B0181299E5E3900FDF089 /* Blinker-Bold.ttf */,
+				748B0178299E4C1D00FDF089 /* Pacifico-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		7494769B2997BC8F00951132 /* CartPageModule */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,6 +288,7 @@
 		74EC54532993BFD900400DF8 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				748B0177299E4A7C00FDF089 /* Fonts */,
 				74EC544A2993BE0200400DF8 /* Info.plist */,
 				74EC54452993BE0200400DF8 /* Assets.xcassets */,
 				74EC54422993BE0200400DF8 /* Main.storyboard */,
@@ -421,9 +441,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				748B017E299E4F7500FDF089 /* FredokaOne.ttf in Resources */,
+				748B0182299E5E3900FDF089 /* Blinker-Bold.ttf in Resources */,
 				74EC54492993BE0200400DF8 /* LaunchScreen.storyboard in Resources */,
 				74EC54462993BE0200400DF8 /* Assets.xcassets in Resources */,
 				74EC54442993BE0200400DF8 /* Main.storyboard in Resources */,
+				748B0179299E4C1D00FDF089 /* Pacifico-Regular.ttf in Resources */,
+				748B0180299E5DEA00FDF089 /* Blinker-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
