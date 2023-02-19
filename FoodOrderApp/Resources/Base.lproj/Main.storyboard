@@ -31,7 +31,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rcz-yC-Wmg">
-                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <rect key="frame" x="0.0" y="159" width="393" height="610"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="6xR-6L-xAP">
                                     <size key="itemSize" width="128" height="128"/>
@@ -92,19 +92,30 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
+                            <searchBar contentMode="redraw" placeholder="Ürün Ara" translatesAutoresizingMaskIntoConstraints="NO" id="Q5Q-BD-I98">
+                                <rect key="frame" x="0.0" y="103" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="fus-HQ-txs"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Rcz-yC-Wmg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="67R-UU-8sx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rcz-yC-Wmg" secondAttribute="trailing" id="9Ta-9n-yAx"/>
+                            <constraint firstItem="Q5Q-BD-I98" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Afd-1j-pNr"/>
+                            <constraint firstItem="Q5Q-BD-I98" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="H3Y-BY-YGb"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Rcz-yC-Wmg" secondAttribute="bottom" id="NcY-HO-DmG"/>
-                            <constraint firstItem="Rcz-yC-Wmg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xPo-bk-dJM"/>
+                            <constraint firstItem="Q5Q-BD-I98" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RoX-zX-akG"/>
+                            <constraint firstItem="Rcz-yC-Wmg" firstAttribute="top" secondItem="Q5Q-BD-I98" secondAttribute="bottom" id="cgY-XL-RT6"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="🛒 Getir Sepeti" id="adb-0s-R0l"/>
                     <connections>
                         <outlet property="foodCollectionView" destination="Rcz-yC-Wmg" id="GyZ-s2-Sm0"/>
+                        <outlet property="searchBar" destination="Q5Q-BD-I98" id="h0p-7O-tiZ"/>
                         <segue destination="LyC-Um-TIZ" kind="show" identifier="toDetail" id="5g6-ui-IsG"/>
                     </connections>
                 </viewController>
@@ -298,12 +309,12 @@
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="NqT-7T-V3k">
-                        <rect key="frame" x="0.0" y="59" width="393" height="103"/>
+                        <rect key="frame" x="0.0" y="59" width="393" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Gable Green"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="35"/>
-                            <color key="textColor" name="Gable Green"/>
+                            <color key="textColor" systemColor="systemGreenColor"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>

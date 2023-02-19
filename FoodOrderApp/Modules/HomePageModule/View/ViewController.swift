@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var allFoods = [Foods]()
     var badgeForCart = 0
 
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var foodCollectionView: UICollectionView!
     var cellWidth: CGFloat = 0
     var cellHeight: CGFloat = 0
@@ -50,6 +51,7 @@ extension ViewController {
     func setup () {
         foodCollectionView.dataSource = self
         foodCollectionView.delegate = self
+        searchBar.delegate = self
     }
 }
 
@@ -113,6 +115,17 @@ extension ViewController: DetailPageToHomePage {
             if badgeForCart > 0 {
                 cartItem.badgeValue = String(badgeForCart)
             }
+        }
+    }
+}
+
+extension ViewController: UISearchBarDelegate
+{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchText == "" {
+            homePagePresenterObject?.getAllFoods()
+        } else {
+            homePagePresenterObject?.searchFoods(searchText: searchText)
         }
     }
 }
