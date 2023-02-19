@@ -11,12 +11,13 @@ protocol ViewToPresenterHomePageProtocol {
     var homePageInteractor: PresenterToInteractorHomePageProtocol? { get set }
     var homePageView: PresenterToViewHomePageProtocol? { get set }
     func getAllFoods()
+    func searchFoods(searchText: String)
 }
 
 protocol PresenterToInteractorHomePageProtocol {
     var homePagePresenter: InteractorToPresenterHomePageProtocol? { get set }
     func getAllFoodsInteractor()
-
+    func searchFoodsI(searchText: String)
 }
 
 protocol InteractorToPresenterHomePageProtocol {

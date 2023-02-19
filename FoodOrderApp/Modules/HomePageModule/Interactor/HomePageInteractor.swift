@@ -14,6 +14,16 @@ class HomePageInteractor: PresenterToInteractorHomePageProtocol {
     var homePagePresenter: InteractorToPresenterHomePageProtocol?
     var allFoods = [Foods]()
 
+    func searchFoodsI(searchText: String) {
+        var searchFoods = [Foods]()
+        for food in allFoods {
+            if food.yemek_adi!.lowercased().contains(searchText.lowercased()) {
+                searchFoods.append(food)
+
+            }
+        }
+        self.homePagePresenter?.sendDataToPresenter(foods: searchFoods)
+    }
 
     func getAllFoodsInteractor() {
         AF.request("http://kasimadalan.pe.hu/yemekler/tumYemekleriGetir.php", method: .get).response { response in
