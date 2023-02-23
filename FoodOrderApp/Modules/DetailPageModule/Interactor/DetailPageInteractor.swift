@@ -37,7 +37,7 @@ class DetailPageInteractor: PresenterToInteractorDetailPageProtocol {
                     print(answer)
 
                 } catch {
-                    print("sil")
+                    
                     print(error.localizedDescription)
                 }
             }

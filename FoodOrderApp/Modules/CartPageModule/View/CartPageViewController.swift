@@ -34,13 +34,13 @@ class CartPageViewController: UIViewController {
 
     @IBAction func buttonDeleteAll(_ sender: Any) {
         indicator.startAnimating()
-        let alert = UIAlertController(title: "Sepeti boşalt", message: "Sepetinizdeki tüm ürünler silinecek emin misiniz? ", preferredStyle: .alert)
-        let okeyAction = UIAlertAction(title: "Tamam", style: .cancel) { action in
+        let alert = UIAlertController(title: "Sepeti boşalt".localized(), message: "Sepetinizdeki tüm ürünlerin silineceğinden emin misiniz?".localized(), preferredStyle: .alert)
+        let okeyAction = UIAlertAction(title: "Tamam".localized(), style: .cancel) { action in
             for i in self.allFoodsCart {
                 self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: i.sepet_yemek_id!, kullanici_adi: i.kullanici_adi!)
             }
         }
-        let cancelAction = UIAlertAction(title: "İptal", style: .default)
+        let cancelAction = UIAlertAction(title: "İptal".localized(), style: .default)
         indicator.stopAnimating()
         alert.addAction(okeyAction)
         alert.addAction(cancelAction)
@@ -52,8 +52,8 @@ class CartPageViewController: UIViewController {
             let stringPrice = String(totalCartPrice)
             //  performSegue(withIdentifier: "toOrderDetailPage", sender: stringPrice)
         } else {
-            let alert = UIAlertController(title: "Sepetiniz Boş", message: "Sepetinize ürün ekleyip devam edebilirsiniz.", preferredStyle: .alert)
-            let okeyAction = UIAlertAction(title: "Tamam", style: .default)
+            let alert = UIAlertController(title: "Sepetiniz Boş".localized(), message: "Sepetinize ürün ekleyip devam edebilirsiniz.".localized(), preferredStyle: .alert)
+            let okeyAction = UIAlertAction(title: "Tamam".localized(), style: .default)
             alert.addAction(okeyAction)
             self.present(alert, animated: true)
             //toOrderDetailPage
@@ -92,13 +92,16 @@ extension CartPageViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let deleteAction = UIContextualAction(style: .destructive, title: "Sil") { (contextualAction, view, bool) in
+        let deleteAction = UIContextualAction(style: .destructive, title: "Sil".localized()) { (contextualAction, view, bool) in
 
             let food = self.allFoodsCart[indexPath.row]
-            let alert = UIAlertController(title: "Silme İşlemi", message: "\(food.yemek_adi!) silinsin mi?", preferredStyle: .alert)
-            let cancelAction = UIAlertAction(title: "İptal", style: .cancel)
+            let alertTitle = NSLocalizedString("Sil".localized(), comment: "Title for delete alert")
+            let confirmationMessage = String(format: NSLocalizedString("%@ silinsin mi?".localized(), comment: "Confirmation message when deleting an item"), food.yemek_adi!)
+            let alert = UIAlertController(title: alertTitle, message: confirmationMessage, preferredStyle: .alert)
+
+            let cancelAction = UIAlertAction(title: "İptal".localized(), style: .cancel)
             alert.addAction(cancelAction)
-            let yesAction = UIAlertAction(title: "Evet", style: .destructive) { action in
+            let yesAction = UIAlertAction(title: "Tamam".localized(), style: .destructive) { action in
                 self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: food.sepet_yemek_id!, kullanici_adi: food.kullanici_adi!)
             }
             alert.addAction(yesAction)
@@ -116,7 +119,7 @@ extension CartPageViewController: PresenterToViewCartPageProtocol {
 
         self.allFoodsCart = foodsCart
         self.totalCartPrice = totalPrice
-        self.totalPriceLabel.text = "Toplam: \(String(totalPrice))₺"
+        self.totalPriceLabel.text = "\(String(totalPrice))₺"
         self.totalPriceLabel2.text = "\(String(totalPrice))₺"
 
         DispatchQueue.main.async {
@@ -158,9 +161,9 @@ extension CartPageViewController: CartPlusOrMinus {
             cartPagePresenterObject?.changeCartFoodCount(yemek_adi: cartFood.yemek_adi!, yemek_resim_adi: cartFood.yemek_resim_adi!, yemek_fiyat: cartFood.yemek_fiyat!, sepet_yemek_id: cartFood.sepet_yemek_id!, yeniAdet: unit!)
         }
         else {
-            let alert = UIAlertController(title: "En fazla 30 adet Sipariş verebilirsiniz.", message: "", preferredStyle: .alert)
+            let alert = UIAlertController(title: "En fazla 30 adet Sipariş verebilirsiniz.".localized(), message: "", preferredStyle: .alert)
 
-            let okeyAction = UIAlertAction(title: "Tamam", style: .cancel)
+            let okeyAction = UIAlertAction(title: "Tamam".localized(), style: .cancel)
             alert.addAction(okeyAction)
             self.present(alert, animated: true)
             indicator.stopAnimating()
@@ -179,13 +182,16 @@ extension CartPageViewController: CartPlusOrMinus {
             cartPagePresenterObject?.changeCartFoodCount(yemek_adi: cartFood.yemek_adi!, yemek_resim_adi: cartFood.yemek_resim_adi!, yemek_fiyat: cartFood.yemek_fiyat!, sepet_yemek_id: cartFood.sepet_yemek_id!, yeniAdet: unit!)
         }
         else if unitInt == 1 {
-            let alert = UIAlertController(title: "Ürün silinecek", message: "Sepetinizde 1 adet \(cartFood.yemek_adi!) var. Silmek istediğinize Emin misiniz? ", preferredStyle: .alert)
+            let alertTitle = NSLocalizedString("Ürün silinecek".localized(), comment: "Title for delete confirmation alert")
+            let confirmationMessage = String(format: NSLocalizedString("Sepetinizde 1 adet %@ var. Silmek istediğinize Emin misiniz?".localized(), comment: "Confirmation message when deleting an item from cart"), cartFood.yemek_adi!)
+            let alert = UIAlertController(title: alertTitle, message: confirmationMessage, preferredStyle: .alert)
 
-            let okeyAction = UIAlertAction(title: "Tamam", style: .cancel) { action in
+
+            let okeyAction = UIAlertAction(title: "Tamam".localized(), style: .cancel) { action in
                 self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: cartFood.sepet_yemek_id!, kullanici_adi: cartFood.kullanici_adi!)
 
             }
-            let cancelAction = UIAlertAction(title: "İptal", style: .default)
+            let cancelAction = UIAlertAction(title: "İptal".localized(), style: .default)
             alert.addAction(okeyAction)
             alert.addAction(cancelAction)
             self.present(alert, animated: true)
@@ -193,7 +199,7 @@ extension CartPageViewController: CartPlusOrMinus {
 
         }
         else {
-            print("Hata")
+            print("Hata".localized())
             indicator.stopAnimating()
 
         }

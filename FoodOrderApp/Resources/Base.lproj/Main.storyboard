@@ -314,7 +314,7 @@
                         <color key="tintColor" name="Gable Green"/>
                         <textAttributes key="largeTitleTextAttributes">
                             <fontDescription key="fontDescription" name="FredokaOne-Regular" family="Fredoka One" pointSize="35"/>
-                            <color key="textColor" systemColor="systemGreenColor"/>
+                            <color key="textColor" name="Gable Green"/>
                             <offsetWrapper key="textShadowOffset" horizontal="0.0" vertical="0.0"/>
                         </textAttributes>
                     </navigationBar>
@@ -625,7 +625,7 @@
         <image name="takeoutbag.and.cup.and.straw.fill" catalog="system" width="128" height="109"/>
         <image name="trash.fill" catalog="system" width="119" height="128"/>
         <namedColor name="Gable Green">
-            <color red="0.10196078431372549" green="0.16862745098039217" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.047058823529411764" green="0.054901960784313725" blue="0.28627450980392155" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Yellow">
             <color red="1" green="0.75294117647058822" blue="0.078431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

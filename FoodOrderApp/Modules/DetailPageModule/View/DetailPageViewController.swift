@@ -36,10 +36,13 @@ class DetailPageViewController: UIViewController {
                     self.foodImageView.kf.setImage(with: url)
                 }
             }
-         
+
             foodPriceLabel.text = "\(f.yemek_fiyat!)₺"
             foodNameLabel.text = f.yemek_adi
-            totalPriceLabel.text = "Toplam: \(f.yemek_fiyat!)₺"
+            let totalPrice = f.yemek_fiyat!
+            let totalPriceString = String(format: NSLocalizedString("TOTAL_PRICE_LABEL_TEXT", comment: ""), totalPrice)
+            totalPriceLabel.text = totalPriceString.localized()
+
 
             let randomDouble = Double.random(in: 0.0...5.0)
             let roundedDouble = String(format: "%.1f", randomDouble)
@@ -48,7 +51,14 @@ class DetailPageViewController: UIViewController {
             foodPoint.text = "★" + roundedDouble + "(\(reviewCountString))"
 
 
-            let randomPopularLabel = [" Popüler ", " Yeni ", " En Çok Satanlar ", " Sınırlı Sayıda ", " Yerli Üretim "]
+            let randomPopularLabel = [
+                NSLocalizedString("POPULAR_LABEL_1", comment: ""),
+                NSLocalizedString("POPULAR_LABEL_2", comment: ""),
+                NSLocalizedString("POPULAR_LABEL_3", comment: ""),
+                NSLocalizedString("POPULAR_LABEL_4", comment: ""),
+                NSLocalizedString("POPULAR_LABEL_5", comment: "")
+            ]
+
             popularLabel.text = randomPopularLabel.randomElement()
 
         }
@@ -59,10 +69,10 @@ class DetailPageViewController: UIViewController {
     }
     @IBAction func addToCartButton(_ sender: Any) {
 
-        let alertContreller = UIAlertController(title: "✓", message: "Sepete Eklendi", preferredStyle: .alert)
+        let alertContreller = UIAlertController(title: "✓", message: NSLocalizedString("ADDED_TO_CART_MESSAGE", comment: ""), preferredStyle: .alert)
 
         self.present(alertContreller, animated: true)
-        let okeyAction = UIAlertAction(title: "Kapat", style: .cancel) {
+        let okeyAction = UIAlertAction(title: "Kapat".localized(), style: .cancel) {
             action in
             self.navigationController?.popViewController(animated: true)
         }
@@ -130,5 +140,4 @@ extension DetailPageViewController: PresenterToViewDetailPageProtocol {
     func totalPriceDataToView(number: Int) {
         totalPriceLabel.text = "Toplam: \(String(number))₺"
     }
-
 }

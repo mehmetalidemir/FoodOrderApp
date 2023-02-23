@@ -1,0 +1,35 @@
+"TOTAL_PRICE_LABEL_TEXT" = "Total:";
+
+"POPULAR_LABEL_1" = " Popular ";
+"POPULAR_LABEL_2" = " New ";
+"POPULAR_LABEL_3" = " Best sellers ";
+"POPULAR_LABEL_4" = " Limited edition ";
+"POPULAR_LABEL_5" = " Domestic Production ";
+
+"ADDED_TO_CART_MESSAGE" = "Added to Cart";
+
+"Kapat" = "Close";
+
+"Sepeti boşalt" = "Empty cart";
+
+"Sepetinizdeki tüm ürünlerin silineceğinden emin misiniz?" = "Are you sure all items in your cart will be deleted?";
+
+"Tamam" = "Okey";
+
+"İptal" = "Cancel";
+
+"Sepetiniz Boş" = "Your Cart Is Empty";
+
+"Sepetinize ürün ekleyip devam edebilirsiniz." = "You can add products to your cart and continue.";
+
+"Ürün silinecek" = "The item will be deleted";
+
+"Sepetinizde 1 adet %@ var. Silmek istediğinize Emin misiniz?" = "You have 1 %@ in your cart. Are you sure you want to delete?";
+
+"Hata" = "Error";
+
+"Sil" = "Delete";
+
+"%@ silinsin mi?" = "Delete %@?";
+
+"En fazla 30 adet Sipariş verebilirsiniz." = "You can order a maximum of 30 units.";

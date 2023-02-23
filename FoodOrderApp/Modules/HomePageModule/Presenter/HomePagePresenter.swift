@@ -10,11 +10,11 @@ import Foundation
 class HomePagePresenter: ViewToPresenterHomePageProtocol, InteractorToPresenterHomePageProtocol {
     var homePageInteractor: PresenterToInteractorHomePageProtocol?
     var homePageView: PresenterToViewHomePageProtocol?
-    
+
     func searchFoods(searchText: String) {
         homePageInteractor?.searchFoodsI(searchText: searchText)
     }
-    
+
     func getAllFoods() {
         homePageInteractor?.getAllFoodsInteractor()
     }
