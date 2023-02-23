@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class CartPageInteractor: PresenterToInteractorCartPageProtocol {
-    
+
     var cartPagePresenter: InteractorToPresenterCartPageProtocol?
 
     func changeCartFoodCountI(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, sepet_yemek_id: String, yeniAdet: String) {
@@ -59,7 +59,7 @@ class CartPageInteractor: PresenterToInteractorCartPageProtocol {
         var foodTotalPrice = 0
         let emptyAnswerArray: [FoodsCart] = []
         let param: Parameters = ["kullanici_adi": "demir"]
-        
+
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).response { response in
             if let data = response.data {
                 do {
