@@ -17,16 +17,13 @@ class CartPageTableViewCell: UITableViewCell {
     var delegate: CartPlusOrMinus?
     var indexPath: IndexPath?
 
- 
     @IBAction func minusButton(_ sender: UIButton) {
         sender.preventRepeatedPresses()
-
         delegate?.cartMinus(indexPath: indexPath!)
     }
 
     @IBAction func plusButton(_ sender: UIButton) {
         sender.preventRepeatedPresses()
-
         delegate?.cartPlus(indexPath: indexPath!)
     }
 }

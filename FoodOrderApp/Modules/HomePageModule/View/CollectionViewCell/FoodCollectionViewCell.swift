@@ -10,16 +10,15 @@ import SwiftUI
 
 class FoodCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var foodImage: UIImageView!
-
     @IBOutlet weak var foodPrice: UILabel!
     @IBOutlet weak var foodName: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        self.layer.cornerRadius = 10
+        self.layer.cornerRadius = 20
         self.layer.masksToBounds = true
-//        self.layer.borderWidth = 1
-//        self.layer.borderColor = CGColor(gray: 0.5, alpha: 0.5)
+        self.layer.borderWidth = 1
+        self.layer.borderColor = CGColor(gray: 0.5, alpha: 0.5)
     }
 }
 

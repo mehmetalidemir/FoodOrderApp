@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var allFoods = [Foods]()
     var badgeForCart = 0
 
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var foodCollectionView: UICollectionView!
     var cellWidth: CGFloat = 0
@@ -25,6 +26,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setup()
         HomePageRouter.createModule(ref: self)
+        indicator.hidesWhenStopped = true
+          indicator.startAnimating()
         homePagePresenterObject?.getAllFoods()
     }
 
@@ -60,6 +63,7 @@ extension ViewController: PresenterToViewHomePageProtocol {
         self.allFoods = foods
         DispatchQueue.main.async {
             self.foodCollectionView.reloadData()
+            self.indicator.stopAnimating()
         }
     }
 }
@@ -103,8 +107,6 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
         }
 
     }
-
-
 }
 
 extension ViewController: DetailPageToHomePage {
@@ -127,5 +129,25 @@ extension ViewController: UISearchBarDelegate
         } else {
             homePagePresenterObject?.searchFoods(searchText: searchText)
         }
+    }
+}
+
+extension ViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let availableWidth = collectionView.bounds.width - (spacing * (numberOfColumn + 1))
+        let cellWidth = availableWidth / numberOfColumn
+        return CGSize(width: cellWidth, height: cellWidth)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return spacing
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return spacing
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
     }
 }

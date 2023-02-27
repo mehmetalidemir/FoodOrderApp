@@ -33,3 +33,9 @@
 "%@ silinsin mi?" = "Delete %@?";
 
 "En fazla 30 adet Sipariş verebilirsiniz." = "You can order a maximum of 30 units.";
+
+"Siparişiniz Alındı" = "Your Order Received";
+
+"15 dakikada kapınızda" = "15 minutes at your door";
+
+"Toplam: %@₺" = "Total: %@₺";
