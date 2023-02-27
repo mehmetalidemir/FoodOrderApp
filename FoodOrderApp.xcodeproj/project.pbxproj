@@ -10,7 +10,6 @@
 		745877D1299A55CA00948342 /* UIButton+preventRepeatedPresses.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745877D0299A55CA00948342 /* UIButton+preventRepeatedPresses.swift */; };
 		746E8E2829956364006F741E /* Foods.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2729956364006F741E /* Foods.swift */; };
 		746E8E2A29956528006F741E /* FoodsCart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746E8E2929956528006F741E /* FoodsCart.swift */; };
-		748B0179299E4C1D00FDF089 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B0178299E4C1D00FDF089 /* Pacifico-Regular.ttf */; };
 		748B017E299E4F7500FDF089 /* FredokaOne.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B017C299E4F0400FDF089 /* FredokaOne.ttf */; };
 		748B0180299E5DEA00FDF089 /* Blinker-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B017F299E5DEA00FDF089 /* Blinker-Regular.ttf */; };
 		748B0182299E5E3900FDF089 /* Blinker-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 748B0181299E5E3900FDF089 /* Blinker-Bold.ttf */; };
@@ -28,6 +27,7 @@
 		74D469D72996720B00FA5F7F /* DetailPageProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469D62996720B00FA5F7F /* DetailPageProtocols.swift */; };
 		74D469D92996722600FA5F7F /* DetailPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469D82996722600FA5F7F /* DetailPageViewController.swift */; };
 		74D469DC2996BA5D00FA5F7F /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D469DB2996BA5D00FA5F7F /* Protocols.swift */; };
+		74D77EB429ABC24800D0D935 /* Pacifico-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 74D77EB329ABC24800D0D935 /* Pacifico-Regular.ttf */; };
 		74EC543D2993BE0200400DF8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC543C2993BE0200400DF8 /* AppDelegate.swift */; };
 		74EC543F2993BE0200400DF8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC543E2993BE0200400DF8 /* SceneDelegate.swift */; };
 		74EC54412993BE0200400DF8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74EC54402993BE0200400DF8 /* ViewController.swift */; };
@@ -47,7 +47,6 @@
 		745877D0299A55CA00948342 /* UIButton+preventRepeatedPresses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+preventRepeatedPresses.swift"; sourceTree = "<group>"; };
 		746E8E2729956364006F741E /* Foods.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Foods.swift; sourceTree = "<group>"; };
 		746E8E2929956528006F741E /* FoodsCart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodsCart.swift; sourceTree = "<group>"; };
-		748B0178299E4C1D00FDF089 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../../../../Pacifico 2/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		748B017C299E4F0400FDF089 /* FredokaOne.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FredokaOne.ttf; sourceTree = "<group>"; };
 		748B017F299E5DEA00FDF089 /* Blinker-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Regular.ttf"; sourceTree = "<group>"; };
 		748B0181299E5E3900FDF089 /* Blinker-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Blinker-Bold.ttf"; sourceTree = "<group>"; };
@@ -69,6 +68,7 @@
 		74D469D62996720B00FA5F7F /* DetailPageProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageProtocols.swift; sourceTree = "<group>"; };
 		74D469D82996722600FA5F7F /* DetailPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPageViewController.swift; sourceTree = "<group>"; };
 		74D469DB2996BA5D00FA5F7F /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		74D77EB329ABC24800D0D935 /* Pacifico-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Pacifico-Regular.ttf"; path = "../../../../../Pacifico/Pacifico-Regular.ttf"; sourceTree = "<group>"; };
 		74EC54392993BE0200400DF8 /* FoodOrderApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodOrderApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74EC543C2993BE0200400DF8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74EC543E2993BE0200400DF8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,8 +102,8 @@
 			children = (
 				748B017F299E5DEA00FDF089 /* Blinker-Regular.ttf */,
 				748B017C299E4F0400FDF089 /* FredokaOne.ttf */,
+				74D77EB329ABC24800D0D935 /* Pacifico-Regular.ttf */,
 				748B0181299E5E3900FDF089 /* Blinker-Bold.ttf */,
-				748B0178299E4C1D00FDF089 /* Pacifico-Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -457,8 +457,8 @@
 				74EC54492993BE0200400DF8 /* LaunchScreen.storyboard in Resources */,
 				74EC54462993BE0200400DF8 /* Assets.xcassets in Resources */,
 				74EC54442993BE0200400DF8 /* Main.storyboard in Resources */,
+				74D77EB429ABC24800D0D935 /* Pacifico-Regular.ttf in Resources */,
 				7494028D29A3A808003A99D2 /* Localizable.strings in Resources */,
-				748B0179299E4C1D00FDF089 /* Pacifico-Regular.ttf in Resources */,
 				748B0180299E5DEA00FDF089 /* Blinker-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

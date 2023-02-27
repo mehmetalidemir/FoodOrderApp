@@ -9,12 +9,11 @@ import Foundation
 import Alamofire
 
 class CartPageInteractor: PresenterToInteractorCartPageProtocol {
-
     var cartPagePresenter: InteractorToPresenterCartPageProtocol?
 
     func changeCartFoodCountI(yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, sepet_yemek_id: String, yeniAdet: String) {
 
-        let param: Parameters = ["sepet_yemek_id": sepet_yemek_id, "kullanici_adi": "demir"]
+        let param: Parameters = ["sepet_yemek_id": sepet_yemek_id, "kullanici_adi": "mehmetali_demir"]
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response { response in
             if let data = response.data {
                 do {
@@ -38,7 +37,7 @@ class CartPageInteractor: PresenterToInteractorCartPageProtocol {
 
         if let intUnit = Int(yemek_siparis_adet), let intFiyat = Int(yemek_fiyat) {
 
-            let params: Parameters = ["yemek_adi": yemek_adi, "yemek_resim_adi": yemek_resim_adi, "yemek_fiyat": intFiyat, "yemek_siparis_adet": intUnit, "kullanici_adi": "demir"]
+            let params: Parameters = ["yemek_adi": yemek_adi, "yemek_resim_adi": yemek_resim_adi, "yemek_fiyat": intFiyat, "yemek_siparis_adet": intUnit, "kullanici_adi": "mehmetali_demir"]
 
             AF.request("http://kasimadalan.pe.hu/yemekler/sepeteYemekEkle.php", method: .post, parameters: params).response { response in
                 if let data = response.data {
@@ -50,21 +49,20 @@ class CartPageInteractor: PresenterToInteractorCartPageProtocol {
                     }
                 }
             }
-
-        } }
+        }
+    }
 
 
     func getCartFoodI() {
         var totalPrice = 0
         var foodTotalPrice = 0
         let emptyAnswerArray: [FoodsCart] = []
-        let param: Parameters = ["kullanici_adi": "demir"]
+        let param: Parameters = ["kullanici_adi": "mehmetali_demir"]
 
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettekiYemekleriGetir.php", method: .post, parameters: param).response { response in
             if let data = response.data {
                 do {
                     let answer = try JSONDecoder().decode(FoodsCartResponse.self, from: data)
-
                     if var answerArray = answer.sepet_yemekler {
                         for food in answerArray {
                             foodTotalPrice = Int(food.yemek_siparis_adet!)! * Int(food.yemek_fiyat!)!
@@ -82,7 +80,7 @@ class CartPageInteractor: PresenterToInteractorCartPageProtocol {
     }
 
     func deleteCartFoodI(sepet_yemek_id: String, kullanici_adi: String) {
-        let param: Parameters = ["sepet_yemek_id": sepet_yemek_id, "kullanici_adi": "demir"]
+        let param: Parameters = ["sepet_yemek_id": sepet_yemek_id, "kullanici_adi": "mehmetali_demir"]
         AF.request("http://kasimadalan.pe.hu/yemekler/sepettenYemekSil.php", method: .post, parameters: param).response { response in
             if let data = response.data {
                 do {

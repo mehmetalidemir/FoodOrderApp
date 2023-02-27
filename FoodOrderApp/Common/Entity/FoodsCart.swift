@@ -15,10 +15,6 @@ class FoodsCart: Codable {
     var yemek_siparis_adet: String?
     var kullanici_adi: String?
 
-    init() {
-
-    }
-
     init(sepet_yemek_id: String, yemek_adi: String, yemek_resim_adi: String, yemek_fiyat: String, yemek_siparis_adet: String, kullanici_adi: String) {
         self.sepet_yemek_id = sepet_yemek_id
         self.yemek_adi = yemek_adi

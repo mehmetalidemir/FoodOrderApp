@@ -17,6 +17,7 @@ protocol ViewToPresenterDetailPageProtocol {
     func setTotalPrice(price: Int)
     func addToCart(food: Foods, unit: String)
 }
+
 protocol PresenterToInteractorDetailPageProtocol {
     var detailPagePresenter: InteractorToPresenterDetailPageProtocol? { get set }
     func getCartInfoI()

@@ -49,14 +49,15 @@ class CartPageViewController: UIViewController {
 
     @IBAction func buttonConfirmCart(_ sender: Any) {
         if totalCartPrice > 0 {
-            let stringPrice = String(totalCartPrice)
-            //  performSegue(withIdentifier: "toOrderDetailPage", sender: stringPrice)
+            let alert = UIAlertController(title: "Siparişiniz Alındı".localized(), message: "15 dakikada kapınızda".localized(), preferredStyle: .alert)
+            let okeyAction = UIAlertAction(title: "Tamam".localized(), style: .default)
+            alert.addAction(okeyAction)
+            self.present(alert, animated: true)
         } else {
             let alert = UIAlertController(title: "Sepetiniz Boş".localized(), message: "Sepetinize ürün ekleyip devam edebilirsiniz.".localized(), preferredStyle: .alert)
             let okeyAction = UIAlertAction(title: "Tamam".localized(), style: .default)
             alert.addAction(okeyAction)
             self.present(alert, animated: true)
-            //toOrderDetailPage
         }
     }
 }
@@ -86,8 +87,6 @@ extension CartPageViewController: UITableViewDelegate, UITableViewDataSource {
             cell.foodPrice.text = "\(totalFoodPrice)₺"
             cell.unitLabel.text = "\(tempFood.yemek_siparis_adet!)"
         }
-
-
         return cell
     }
 
@@ -109,8 +108,6 @@ extension CartPageViewController: UITableViewDelegate, UITableViewDataSource {
         }
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
-
-
 }
 
 extension CartPageViewController: PresenterToViewCartPageProtocol {
@@ -153,7 +150,6 @@ extension CartPageViewController: CartPlusOrMinus {
 
         let cartFood = allFoodsCart[indexPath.row]
         var unit = cartFood.yemek_siparis_adet
-
         var unitInt = Int(unit!)!
         if unitInt < 30 {
             unitInt += 1
@@ -186,22 +182,18 @@ extension CartPageViewController: CartPlusOrMinus {
             let confirmationMessage = String(format: NSLocalizedString("Sepetinizde 1 adet %@ var. Silmek istediğinize Emin misiniz?".localized(), comment: "Confirmation message when deleting an item from cart"), cartFood.yemek_adi!)
             let alert = UIAlertController(title: alertTitle, message: confirmationMessage, preferredStyle: .alert)
 
-
             let okeyAction = UIAlertAction(title: "Tamam".localized(), style: .cancel) { action in
                 self.cartPagePresenterObject?.deleteCartFood(sepet_yemek_id: cartFood.sepet_yemek_id!, kullanici_adi: cartFood.kullanici_adi!)
-
             }
             let cancelAction = UIAlertAction(title: "İptal".localized(), style: .default)
             alert.addAction(okeyAction)
             alert.addAction(cancelAction)
             self.present(alert, animated: true)
             indicator.stopAnimating()
-
         }
         else {
             print("Hata".localized())
             indicator.stopAnimating()
-
         }
     }
 }

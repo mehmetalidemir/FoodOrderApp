@@ -8,7 +8,6 @@
 import Foundation
 
 class CartPagePresenter: ViewToPresenterCartPageProtocol, InteractorToPresenterCartPageProtocol {
-
     var cartPageInteractor: PresenterToInteractorCartPageProtocol?
     var cartPageView: PresenterToViewCartPageProtocol?
 

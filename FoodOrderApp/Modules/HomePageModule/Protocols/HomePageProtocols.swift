@@ -29,7 +29,6 @@ protocol PresenterToViewHomePageProtocol {
     func sendDataToView(foods: [Foods])
 }
 
-
 protocol PresenterToRouterHomePageProtocol {
     static func createModule(ref: ViewController)
 }
