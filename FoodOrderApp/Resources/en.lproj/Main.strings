@@ -1,0 +1,90 @@
+
+/* Class = "UILabel"; text = "900₺"; ObjectID = "0Uu-cK-DJi"; */
+"0Uu-cK-DJi.text" = "900₺";
+
+/* Class = "UIButton"; configuration.title = "Sepeti Onayla"; ObjectID = "1EI-v7-WEh"; */
+"1EI-v7-WEh.configuration.title" = "Confirm Cart";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "1EI-v7-WEh"; */
+"1EI-v7-WEh.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Ücretsiz"; ObjectID = "1jt-kP-odi"; */
+"1jt-kP-odi.text" = "Free";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "2oI-nH-1gT"; */
+"2oI-nH-1gT.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Teslimat Ücreti"; ObjectID = "48S-y5-HMX"; */
+"48S-y5-HMX.text" = "Delivery Fee";
+
+/* Class = "UILabel"; text = "Yemek Adı"; ObjectID = "8mg-I8-Pjv"; */
+"8mg-I8-Pjv.text" = "Food Name";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "C3D-BL-HGw"; */
+"C3D-BL-HGw.text" = "1";
+
+/* Class = "UILabel"; text = "Popüler"; ObjectID = "D6J-3S-Sxy"; */
+"D6J-3S-Sxy.text" = "Popular";
+
+/* Class = "UILabel"; text = "Yemek adı"; ObjectID = "KQo-3g-3Ga"; */
+"KQo-3g-3Ga.text" = "Food Name";
+
+/* Class = "UILabel"; text = "Yemek adı"; ObjectID = "OOo-ny-Ld1"; */
+"OOo-ny-Ld1.text" = "Food Name";
+
+/* Class = "UILabel"; text = "Toplam"; ObjectID = "PWM-Cz-3be"; */
+"PWM-Cz-3be.text" = "Total";
+
+/* Class = "UISearchBar"; placeholder = "Ürün Ara"; ObjectID = "Q5Q-BD-I98"; */
+"Q5Q-BD-I98.placeholder" = "Seach Food";
+
+/* Class = "UITabBarItem"; title = "Sepet"; ObjectID = "RPz-qb-5ht"; */
+"RPz-qb-5ht.title" = "Cart";
+
+/* Class = "UILabel"; text = "30 ₺"; ObjectID = "S62-dP-5yQ"; */
+"S62-dP-5yQ.text" = "30 ₺";
+
+/* Class = "UILabel"; text = "444₺"; ObjectID = "SLN-Pf-wmL"; */
+"SLN-Pf-wmL.text" = "444₺";
+
+/* Class = "UIButton"; configuration.title = "Sepete Ekle"; ObjectID = "Y6g-M8-MYJ"; */
+"Y6g-M8-MYJ.configuration.title" = "Add to Cart";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Y6g-M8-MYJ"; */
+"Y6g-M8-MYJ.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "5.0"; ObjectID = "acu-3z-ouU"; */
+"acu-3z-ouU.text" = "5.0";
+
+/* Class = "UINavigationItem"; title = "🛒 Getir Sepeti"; ObjectID = "adb-0s-R0l"; */
+"adb-0s-R0l.title" = "🛒 Getir Sepeti";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "ce3-ZS-uQR"; */
+"ce3-ZS-uQR.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Sepet"; ObjectID = "e9N-rv-9Cw"; */
+"e9N-rv-9Cw.title" = "Cart";
+
+/* Class = "UILabel"; text = "444₺"; ObjectID = "nYs-o3-kPl"; */
+"nYs-o3-kPl.text" = "444₺";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "o3N-kf-n38"; */
+"o3N-kf-n38.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "1"; ObjectID = "qlj-Qg-6xc"; */
+"qlj-Qg-6xc.text" = "1";
+
+/* Class = "UILabel"; text = "Toplam"; ObjectID = "u7w-Xt-hu8"; */
+"u7w-Xt-hu8.text" = "Total";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "veH-ZI-9wm"; */
+"veH-ZI-9wm.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Ara Toplam"; ObjectID = "wPP-b1-xJq"; */
+"wPP-b1-xJq.text" = "Subtotal";
+
+/* Class = "UITabBarItem"; title = "Yemek"; ObjectID = "z9b-ge-cPo"; */
+"z9b-ge-cPo.title" = "Food";
+
+/* Class = "UILabel"; text = "30 ₺"; ObjectID = "ztS-Kz-Xqa"; */
+"ztS-Kz-Xqa.text" = "30 ₺";
